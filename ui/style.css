@@ -51,10 +51,11 @@ body {
 .mainTitle{
     font-family:sans-serif;
     color:yellow;
-    font-size=600%;
-    padding-top;100px;
+    font-size:600%;
+    padding-top:100px;
+    text-align:center;
+    font-weight:bold;
 }
-}
-}
+
     
     
