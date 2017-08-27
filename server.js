@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/all-time-favourite', function (req,res){
-   res.send('/ui/all-time-favourite.html') 
+   res.sendFile(path.join(__dirname, 'ui', 'all-time-favourite.html'));
 });
 
 app.get('/top-5', function(req,res){
