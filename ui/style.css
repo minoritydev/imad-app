@@ -1,8 +1,8 @@
-body {
+*{
     font-family: sans-serif;
     color: white;
     background-color:#424242;
-    margin-top: 75px;
+
     height: 100%;
     margin: 0px;
 }
