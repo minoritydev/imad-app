@@ -50,7 +50,7 @@ body {
 }
 
 .list1 {
-    font-size: 200%;
+    font-size: 300%;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -61,7 +61,7 @@ a:hover{
     text-decoration: none;
     background-color:#f7cf09;
     color: black;
-    padding-right: 30px;
-      padding-left: 30px;
+    padding-right: 60px;
+      padding-left: 60px;
 }
     
