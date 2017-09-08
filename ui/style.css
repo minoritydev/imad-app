@@ -4,6 +4,7 @@ body {
     background-color:#424242;
     margin-top: 75px;
     height: 100%;
+    margin: 0px;
 }
 
 .center {
@@ -29,7 +30,7 @@ body {
 }
 .bg1{
     height: 100%;
-    margin: 0;
+   
     background-color: #4f4e4e;
     background-attachment: fixed;
     
