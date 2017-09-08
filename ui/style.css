@@ -54,12 +54,14 @@ body {
     color: white;
     font-weight: bold;
     text-decoration: none;
+    text-align: center;
 }
 
 a:hover{
     text-decoration: none;
     background-color:#f7cf09;
     color: black;
-    padding-right: 10px;
+    padding-right: 30px;
+      padding-left: 30px;
 }
     
