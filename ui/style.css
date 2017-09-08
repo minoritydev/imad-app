@@ -26,4 +26,11 @@ body {
     display: block;
    margin: auto;
 }
+.bg1{
+    height: 100%;
+    margin: 0;
+    background-color: #4f4e4e;
+    background-attachment: fixed;
+    
+}
     
