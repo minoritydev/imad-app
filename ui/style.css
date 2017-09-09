@@ -47,6 +47,7 @@ body {
    
     background-image: url("https://i.imgur.com/NcAQ68k.png");
     background-position: right bottom;
+    background-size: 100%;
     
 
     background-attachment: fixed;
