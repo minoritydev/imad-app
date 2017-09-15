@@ -73,3 +73,7 @@ a:hover{
       border-radius: 10px;
 }
     
+.note{
+    color: white;
+    font-size: 200%;
+}    
