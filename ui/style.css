@@ -75,5 +75,14 @@ a:hover{
     
 .note{
     color: white;
-    font-size: 200%;
+    font-size: 100%;
+    text-align: center;
 }    
+
+.page-heading{
+    color: yellow;
+    font-size: 500%;
+    padding-top: 150px;
+    width: 100%;
+    font-weight: bold;
+}
