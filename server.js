@@ -13,9 +13,9 @@ var config = {
     
 } 
 var Pool = new Pool(config);
-app.get('/test', funtion(req, res{
+app.get('/test', function (req, res){
     Pool.query('select * from list')
-}))
+});
 
 var app = express();
 app.use(morgan('combined'));
