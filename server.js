@@ -29,7 +29,7 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 
 var pool = new Pool(config);
 app.get('/testdb', function(req, res){
-    pool.query('SELECT * FROM List', function (err, result){
+    pool.query('SELECT * FROM "List"', function (err, result){
         if (err){res.status(500).send(err.toString());}
         else { res.send(JSON.stringify(result)); }
     });
