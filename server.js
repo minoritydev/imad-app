@@ -34,11 +34,10 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 
 app.get('/testdb', function (req, res){
 res.send('is it working pfffffff');
-/* Pool.query('select * from list', function (err, result) {
+Pool.query('select * from list', function (err, result) {
 if (err) { res.status(500).send(err, toString());}
 else {res.send(JSON.stringfy(result));}
-})
-}); */
+});
 
 });
 // Do not change port, otherwise your app won't run on IMAD servers
