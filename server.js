@@ -34,8 +34,8 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 
 app.get('/testdb', function (req, res){
 
-Pool.query('select * from list', function (err, result) {
-if (err) { res.status(500).send(err, toString());}
+Pool.query('select * from List', function (err, result) {
+if (err) { res.status(404).send(err, toString());}
 else {res.send(JSON.stringfy(result));}
 });
 
