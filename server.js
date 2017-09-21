@@ -8,7 +8,7 @@ user: 'debarghyas' ,
 database: 'debarghyas' ,
 host: 'db.imad.hasura-app.io' ,
 port: '5432' , 
-password: process.env.DB_PASSWORD
+password: 'db-debarghyas-30817'
 };
 
 var app = express();
