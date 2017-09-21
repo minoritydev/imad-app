@@ -14,12 +14,13 @@ var config = {
 } 
 var Pool = new Pool(config);
 
-app.get('/test', function (req, res){
-    Pool.query('select * from list', function (err, result) {
+app.get('/testdb', function (req, res){
+    red.send('nigga'); });
+   /* Pool.query('select * from list', function (err, result) {
         if (err) { res.status(500).send(err, toString());}
         else {res.send(JSON.stringfy(result));}
     })
-}); 
+}); */
 
 var app = express();
 app.use(morgan('combined'));
