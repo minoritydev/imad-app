@@ -5,7 +5,9 @@ var app = express();
 var pg = require('pg');
 var connection = "postgresql://debarghyas:db-debarghyas-30817@db.imad.hasura-app.io:5432/debarghyas";
 app.use(morgan('combined'));
-
+const pool = new Pool({
+    connection: connection
+});
 pg.connect();
 
 
@@ -27,19 +29,7 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 }); 
 
 app.get('/testdb', function(req, res){
-var pool = new pg.Pool();
-
-// connection using created pool
-pool.connect(function(err, client, done) {
-  client.query('SELECT * FROM List');
-  done();
+    pool.query('SELECT * FROM List');
+    pool.end();
 });
-
-// pool shutdown
-pool.end();
-});
-
-
-});
- 
 console.log ('IMAD course app listening on port ${port}!');
