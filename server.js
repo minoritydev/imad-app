@@ -38,4 +38,3 @@ app.get('/testdb', function(req, res){
 });
  
 console.log ('IMAD course app listening on port ${port}!');
-});
