@@ -27,9 +27,16 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 }); 
 
 app.get('/testdb', function(req, res){
-    client.query('SELECT * FROM List', (err, res) => {
+var pool = new pg.Pool();
 
-  client.end();
+// connection using created pool
+pool.connect(function(err, client, done) {
+  client.query('SELECT * FROM List');
+  done();
+});
+
+// pool shutdown
+pool.end();
 });
 
 
