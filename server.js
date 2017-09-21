@@ -4,41 +4,40 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 var config = {
-    user: 'debarghyas' ,
-    database: 'debarghyas' ,
-    host: 'db.imad.hasura-app.io' ,
-    port: '5432' , 
-    password: process.env.DB_PASSWORD
+user: 'my_username' ,
+database: 'my_db' ,
+host: 'db.imad.hasura-app.io' ,
+port: '5432' , 
+password: process.env.DB_PASSWORD
 };
 
 var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 app.get('/list', function (req,res){
-    res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
-    
-        
+res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
+
 }); 
-var Pool = new Pool(config);
+ Pool = new Pool(config);
 
 app.get('/testdb', function (req, res){
-    res.send('nigga'); });
-   /* Pool.query('select * from list', function (err, result) {
-        if (err) { res.status(500).send(err, toString());}
-        else {res.send(JSON.stringfy(result));}
-    })
+res.send('is it working pfffffff');
+/* Pool.query('select * from list', function (err, result) {
+if (err) { res.status(500).send(err, toString());}
+else {res.send(JSON.stringfy(result));}
+})
 }); */
 
 });
@@ -47,5 +46,5 @@ app.get('/testdb', function (req, res){
 
 var port = 80;
 app.listen(port, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
+console.log(IMAD course app listening on port ${port}!);
 });
