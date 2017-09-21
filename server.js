@@ -20,5 +20,5 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 
 }); 
 
-
+port = 80;
 console.log ('IMAD course app listening on port ${port}!');
