@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
-var config = {
+/*var config = {
     user: 'debarghyas' ,
     database: 'debarghyas' ,
     host: 'db.imad.hasura-app.io' ,
@@ -15,7 +15,7 @@ var config = {
 var Pool = new Pool(config);
 app.get('/test', function (req, res){
     Pool.query('select * from list')
-});
+}); */
 
 var app = express();
 app.use(morgan('combined'));
