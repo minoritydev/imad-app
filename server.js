@@ -2,13 +2,13 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var app = express();
-var pg = require('pg');
+var Pool = require('pg');
 var connection = "postgresql://debarghyas:db-debarghyas-30817@db.imad.hasura-app.io:5432/debarghyas";
 app.use(morgan('combined'));
 const pool = new Pool({
     connection: connection
 });
-pg.connect();
+Pool.connect();
 
 
 app.get('/', function (req, res) {
