@@ -1,18 +1,17 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-const {Pool, Client} = require('pg');
-
-const pool = new Pool({
-    user: 'debarghyas',
-    host: 'db.imad.hasura-app.io',
-    database: 'debarghyas',
-    password: 'db-debarghyas-30817',
-
-    port: 5432
-});
 var app = express();
+var pg = require('pg');
+var connection = "postgresql://debarghyas:db-debarghyas-30817@db.imad.hasura-app.io:5432/debarghyas";
 app.use(morgan('combined'));
+
+pg.connect();
+
+client.query('SELECT * FROM List', (err, res) => {
+
+  client.end();
+});
 
 app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -32,9 +31,7 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 }); 
 
 app.get('/testdb', function(req, res){
-    pool.query('SELECT * FROM List');
-    console.log (err.res);
-    pool.end();
+
 });
  
 console.log ('IMAD course app listening on port ${port}!');
