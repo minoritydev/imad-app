@@ -8,10 +8,6 @@ app.use(morgan('combined'));
 
 pg.connect();
 
-client.query('SELECT * FROM List', (err, res) => {
-
-  client.end();
-});
 
 app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -31,6 +27,11 @@ res.sendFile(path.join(__dirname, 'ui' , 'list.html'));
 }); 
 
 app.get('/testdb', function(req, res){
+    client.query('SELECT * FROM List', (err, res) => {
+
+  client.end();
+});
+
 
 });
  
