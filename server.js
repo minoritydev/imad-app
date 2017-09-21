@@ -34,7 +34,7 @@ app.get('/list', function (req,res){
 var Pool = new Pool(config);
 
 app.get('/testdb', function (req, res){
-    red.send('nigga'); });
+    res.send('nigga'); });
    /* Pool.query('select * from list', function (err, result) {
         if (err) { res.status(500).send(err, toString());}
         else {res.send(JSON.stringfy(result));}
