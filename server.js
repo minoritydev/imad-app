@@ -13,6 +13,7 @@ var config = {
     
 } 
 var Pool = new Pool(config);
+
 app.get('/test', function (req, res){
     Pool.query('select * from list')
 }); 
