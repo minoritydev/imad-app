@@ -7,7 +7,8 @@ const pool = new Pool({
     user: 'debarghyas',
     host: 'db.imad.hasura-app.io',
     database: 'debarghyas',
-    password: process.env.DB_PASSWORD,
+    password: 'db-debarghyas-30817',
+
     port: 5432
 });
 var app = express();
